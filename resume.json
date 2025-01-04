@@ -1,12 +1,30 @@
 {
   "info": {
     "name": "David (Zack) Lewis",
-    "email": "resume@lima3.me",
+
     "title": "Systems Engineer",
-    "sites": {
-      "linkedin": "https://www.linkedin.com/in/lima3/",
-      "github": "https://github.com/lima3w"
-    }
+    "sites": [
+      {
+        "name": "email",
+        "icon": "fa-regular fa-envelope",
+        "link": "mailto:resume@lima3.me"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "fa-brands fa-linkedin",
+        "link": "https://www.linkedin.com/in/lima3/"
+      },
+      {
+        "name": "Personal Github",
+        "icon": "fa-brands fa-github",
+        "link": "https://github.com/lima3w"
+      },
+      {
+        "name": "Classwork Github",
+        "icon": "fa-brands fa-github",
+        "link": "https://github.com/zack-lewis"
+      }
+    ]
   },
   "summary": "Forward-thinking Systems Engineer with over 15 years of experience designing, implementing, and managing complex IT infrastructures across diverse environments. Expertise in virtualization, network administration, scripting, and cybersecurity, with a proven ability to streamline operations and enhance system reliability. Recognized for leadership, technical skills, and a passion for learning and applying innovative technologies. Adept at managing large-scale projects, collaborating with cross-functional teams, and delivering results that align with organizational goals. Committed to fostering secure, efficient, and scalable systems to drive operational success.",
   "skills": [
