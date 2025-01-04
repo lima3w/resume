@@ -1,130 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        section {
-            margin-bottom: 20px;
-        }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-    </style>
-</head>
-<body>
-    <main id="resume"></main>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header"></header>
+    <main id="main">
+      <article id="mainLeft"></article>
+      <article id="mainRight"></article>
+    </main>
 
     <script>
-        // Function to fetch JSON data and render the resume
-        async function loadResume() {
-            try {
-                const response = await fetch('resume.json'); // Replace 'resume.json' with your file path
-                const data = await response.json();
+      // Function to fetch JSON data and render the resume
+      async function loadResume() {
+        try {
+          const response = await fetch("resume.json");
+          const data = await response.json();
 
-                // Call function to render the resume
-                renderResume(data);
-            } catch (error) {
-                console.error('Error loading resume data:', error);
-            }
+          // Call function to render the resume
+          renderResume(data);
+        } catch (error) {
+          console.error("Error loading resume data:", error);
         }
+      }
 
-        function renderResume(data) {
-            const main = document.getElementById('resume');
+      function renderResume(data) {
+        // Get Sections
+        const header = document.getElementById("header");
+        const main = document.getElementById("main");
+        const mainLeft = document.getElementById("mainLeft");
+        const mainRight = document.getElementById("mainRight");
 
-            // Render Info Section
-            const info = data.info;
-            const infoSection = document.createElement('section');
-            infoSection.innerHTML = `
-                <h1>${info.name}</h1>
-                <p>${info.phone} | ${info.email}</p>
+        // Create Sections
+        const headerSection = document.createElement("section");
+        const infoSection = document.createElement("section");
+        const summarySection = document.createElement("section");
+        const skillsSection = document.createElement("section");
+        const workHistorySection = document.createElement("section");
+        const educationSection = document.createElement("section");
+        const certificationsSection = document.createElement("section");
+        const accoladesSection = document.createElement("section");
+        const homelabSection = document.createElement("section");
+        const personalSection = document.createElement("section");
+
+        // Load Info data
+        const info = data.info;
+
+        // Build Header section
+        headerSection.innerHTML = `
+            <h1>
+                ${info.name}
+            </h1>
+            <hr />
+                ${info.title}
+            <hr />
+            `;
+
+        // Build Info section
+        infoSection.innerHTML = `
+                <p><a href="mailto:${info.email}">${info.email}</a></p>
                 <p>LinkedIn: <a href="${info.sites.linkedin}" target="_blank">${info.sites.linkedin}</a></p>
                 <p>GitHub: <a href="${info.sites.github}" target="_blank">${info.sites.github}</a></p>
             `;
-            main.appendChild(infoSection);
 
-            // Render Summary
-            const summarySection = document.createElement('section');
-            summarySection.innerHTML = `<h2>Summary</h2><p>${data.summary}</p>`;
-            main.appendChild(summarySection);
+        // Build Summary section
+        summarySection.innerHTML = `<h2>Summary</h2><p>${data.summary}</p>`;
 
-            // Render Skills
-            const skillsSection = document.createElement('section');
-            skillsSection.innerHTML = `<h2>Skills</h2><ul>${data.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>`;
-            main.appendChild(skillsSection);
+        // Build Skills section
+        skillsSection.innerHTML = `<h2>Skills</h2><ul>${data.skills
+          .map((skill) => `<li>${skill}</li>`)
+          .join("")}</ul>`;
 
-            // Render Work History
-            const workHistorySection = document.createElement('section');
-            workHistorySection.innerHTML = `<h2>Work History</h2>`;
-            data.workHistory.forEach(job => {
-                workHistorySection.innerHTML += `
+        // Build Work History section
+        workHistorySection.innerHTML = `<h2>Work History</h2>`;
+        data.workHistory.forEach((job) => {
+          workHistorySection.innerHTML += `
                     <div>
                         <h3>${job.title} - ${job.company}</h3>
-                        <p>${job.location} | ${job.startDate} - ${job.endDate}</p>
-                        <ul>${job.contributions.map(contribution => `<li>${contribution}</li>`).join('')}</ul>
+                        <p>${job.location} | ${job.startDate} - ${
+            job.endDate
+          }</p>
+                        <ul>${job.contributions
+                          .map((contribution) => `<li>${contribution}</li>`)
+                          .join("")}</ul>
                     </div>
                 `;
-            });
-            main.appendChild(workHistorySection);
+        });
 
-            // Render Education
-            const educationSection = document.createElement('section');
-            educationSection.innerHTML = `<h2>Education</h2>`;
-            data.education.forEach(edu => {
-                educationSection.innerHTML += `
+        // Build Education section
+        educationSection.innerHTML = `<h2>Education</h2>`;
+        data.education.forEach((edu) => {
+          educationSection.innerHTML += `
                     <div>
                         <h3>${edu.degree}</h3>
-                        <p>${edu.institution}, ${edu.location} (${edu.startDate} - ${edu.endDate || edu.expectedGraduation})</p>
+                        <p>${edu.institution}, ${edu.location} (${
+            edu.startDate
+          } - ${edu.endDate || edu.expectedGraduation})</p>
                     </div>
                 `;
-            });
-            main.appendChild(educationSection);
+        });
 
-            // Render Certifications
-            const certificationsSection = document.createElement('section');
-            certificationsSection.innerHTML = `<h2>Certifications</h2><ul>${data.certifications.map(cert => `<li>${cert.name} (${cert.date})</li>`).join('')}</ul>`;
-            main.appendChild(certificationsSection);
+        // Build Certifications section
+        certificationsSection.innerHTML = `<h2>Certifications</h2><ul>${data.certifications
+          .map((cert) => `<li>${cert.name} (${cert.date})</li>`)
+          .join("")}</ul>`;
 
-            // Render Accolades
-            const accoladesSection = document.createElement('section');
-            accoladesSection.innerHTML = `<h2>Accolades</h2><ul>${data.accolades.map(accolade => `<li>${accolade.name} (${accolade.date})</li>`).join('')}</ul>`;
-            main.appendChild(accoladesSection);
+        // Build Accolades section
+        accoladesSection.innerHTML = `<h2>Accolades</h2><ul>${data.accolades
+          .map((accolade) => `<li>${accolade.name} (${accolade.date})</li>`)
+          .join("")}</ul>`;
 
-            // Render Homelab
-            const homelabSection = document.createElement('section');
-            homelabSection.innerHTML = `<h2>Homelab</h2><ul>${data.homelab.map(item => `<li>${item}</li>`).join('')}</ul>`;
-            main.appendChild(homelabSection);
+        // Build Homelab section
+        homelabSection.innerHTML = `<h2>Homelab</h2><ul>${data.homelab
+          .map((item) => `<li>${item}</li>`)
+          .join("")}</ul>`;
 
-            // Render Personal
-            const personalSection = document.createElement('section');
-            personalSection.innerHTML = `<h2>Personal</h2>`;
-            data.personal.forEach(item => {
-                personalSection.innerHTML += `
+        // Build Personal section
+        personalSection.innerHTML = `<h2>Personal</h2>`;
+        data.personal.forEach((item) => {
+          personalSection.innerHTML += `
                     <div>
                         <h3>${item.title}</h3>
                         <p>${item.organization} (${item.startDate} - ${item.endDate})</p>
                     </div>
                 `;
-            });
-            main.appendChild(personalSection);
-        }
+        });
 
-        // Load resume on page load
-        loadResume();
+        // Append sections to Header
+        header.appendChild(headerSection);
+        header.appendChild(infoSection);
+        header.appendChild(summarySection);
+
+        // Append sections to Main
+        mainRight.appendChild(skillsSection);
+        mainLeft.appendChild(workHistorySection);
+        mainRight.appendChild(educationSection);
+        mainRight.appendChild(certificationsSection);
+        mainRight.appendChild(accoladesSection);
+        mainRight.appendChild(homelabSection);
+        mainRight.appendChild(personalSection);
+      }
+
+      // Load resume on page load
+      loadResume();
     </script>
-</body>
+  </body>
 </html>
