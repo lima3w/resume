@@ -1,0 +1,151 @@
+{
+	"info": {
+		"name": "David (Zack) Lewis",
+		"phone": "(573) 682-0886",
+		"email": "zack@lima3.me",
+		"sites": {
+			"linkedin": "https://www.linkedin.com/in/lima3/",
+			"github": "https://github.com/lima3w"
+		}
+	},
+	"summary": "Forward-thinking professional offering more than 15 years of experience working in fast-paced environments. Expertise in planning, installing and maintaining systems and infrastructures. Passion for learning new and interesting technologies.",
+	"skills": [
+		"Switches and routers",
+		"Network infrastructure administration",
+		"Storage virtualization",
+		"Scripting skills",
+		"Knowledge with Red Hat",
+		"Hardware knowledge",
+		"Infrastructure planning",
+		"Backup administration",
+		"Testing of new technologies"
+	],
+	"workHistory": [
+		{
+			"startDate": "2020-09",
+			"endDate": "Present",
+			"title": "Hypervisor Administrator",
+			"company": "University of Missouri",
+			"location": "Columbia, MO",
+			"contributions": [
+				"Manage and Monitor multiple virtual server environments across multiple sites to ensure secure, consistent, reliable, and up-to-date architecture",
+				"Support multiple storage array platforms across multiple sites to meet the needs of departments across Mizzou academia"
+			]
+		},
+		{
+			"startDate": "2018-10",
+			"endDate": "2020-08",
+			"title": "Systems Engineer",
+			"company": "Huber and Associates",
+			"location": "Jefferson City, MO",
+			"contributions": [
+				"Managed and maintained Veeam cloud environment",
+				"Earned VMCE certification to ensure my understanding of the Veeam products",
+				"Developed best practices for on-premise Veeam environments and implemented these policies at client locations ",
+				"Planned and implemented various server deployments at client locations"
+			]
+		},
+		{
+			"startDate": "2014-08",
+			"endDate": "2018-09",
+			"title": "Linux Systems Administrator",
+			"company": "State of Missouri",
+			"location": "Jefferson City, MO",
+			"contributions": [
+				"Automated server build process to reduce time from 4 hours to 15 minutes per server  ",
+				"Scripted security checks for servers based on federal guidelines",
+				"Monitored and Managed virtual and physical servers in a RHEL environment",
+				"Kept production and dev/test environments updated on schedule"
+			]
+		},
+		{
+			"startDate": "2006-11",
+			"endDate": "2015-08",
+			"title": "Signal Support Systems Specialist",
+			"company": "US Army",
+			"location": "Various",
+			"contributions": [
+				"Helpdesk-level support for military operations",
+				"Server administration",
+				"Extensive training in Army ethos and values"
+			]
+		},
+		{
+			"startDate": "2013-10",
+			"endDate": "2014-07",
+			"title": "Business Service Technician",
+			"company": "Mediacom Cable",
+			"location": "Jefferson City, MO",
+			"contributions": [
+				"Installation and troubleshooting of cable services in business and residential environments"
+			]
+		},
+		{
+			"startDate": "2012-01",
+			"endDate": "2013-09",
+			"title": "Technical Support Representative",
+			"company": "ECi-OMD",
+			"location": "Jefferson City, MO",
+			"contributions": [
+				"Technical support for OMD software",
+				"Worked with developers to improve connectivity with third party applications"
+			]
+		}
+	],
+	"education": [
+		{
+			"startDate": "2021-08",
+			"expectedGraduation": "2027",
+			"degree": "Bachelor of Science: Information Technology",
+			"institution": "University of Missouri",
+			"location": "Columbia, MO"
+		},
+		{
+			"startDate": "2012-08",
+			"endDate": "2014-05",
+			"degree": "Associate of Science: Computer Information Systems",
+			"institution": "Columbia College",
+			"location": "Columbia, MO"
+		}
+	],
+	"certifications": [
+		{
+			"date": "2019-08",
+			"name": "Veeam Certified Engineer, VMCE v9"
+		},
+		{
+			"date": "2011-10",
+			"name": "Microsoft Windows 7, Configuring",
+			"note": "Certificate ID: D524-0988"
+		},
+		{
+			"date": "2011-10",
+			"name": "Microsoft Windows 7, Enterprise Desktop Support",
+			"note": "Certificate ID: D525-8407"
+		}
+	],
+	"accolades": [
+		{
+			"date": "2024-08",
+			"name": "VMware Explore Odyssey Challenge 3rd Place"
+		}
+	],
+	"homelab": [
+		"VMware ESXi with vCenter on Dell R730 and Dell R720xd",
+		"Various virtual machines for home services and testing",
+		"Unraid virtual NAS on Dell R430",
+		"Various docker containers for home microservices",
+		"Dell laptop running dedicated DNS system to provide local lab DNS and adblocking",
+		"Alienware laptop running media server utilizing on-board graphics card for hardware transcoding",
+		"Ubiquiti network hardware for core network functionality",
+		"Mikrotik 10GB network switch for server interconnectivity"
+	],
+	"personal": [
+		{
+			"startDate": "2022-06",
+			"endDate": "Present",
+			"title": "Scoutmaster, Troop 90, Centralia",
+			"organization": "Scouting America (formerly Boy Scouts of America)"
+		}
+	]
+}
