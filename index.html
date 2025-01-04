@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header"></header>
@@ -55,32 +59,38 @@
                 ${info.name}
             </h1>
             <hr />
-                ${info.title}
+                <h2>${info.title}</h2>
             <hr />
             `;
 
         // Build Info section
         infoSection.innerHTML = `
-                <p><a href="mailto:${info.email}">${info.email}</a></p>
-                <p>LinkedIn: <a href="${info.sites.linkedin}" target="_blank">${info.sites.linkedin}</a></p>
-                <p>GitHub: <a href="${info.sites.github}" target="_blank">${info.sites.github}</a></p>
+                <p class="siteLink">
+                ${info.sites
+                  .map(
+                    (site) =>
+                      `<i class="${site.icon}"></i>
+                        <a href="${site.link}" target="_blank" class="siteLink">${site.name}</a>`
+                  )
+                  .join(" || ")}
+                </p>
             `;
 
         // Build Summary section
         summarySection.innerHTML = `<h2>Summary</h2><p>${data.summary}</p>`;
 
         // Build Skills section
-        skillsSection.innerHTML = `<h2>Skills</h2><ul>${data.skills
+        skillsSection.innerHTML = `<h2 class="sub">Skills</h2><ul>${data.skills
           .map((skill) => `<li>${skill}</li>`)
           .join("")}</ul>`;
 
         // Build Work History section
-        workHistorySection.innerHTML = `<h2>Work History</h2>`;
+        workHistorySection.innerHTML = `<h2 class="sub">Work History</h2>`;
         data.workHistory.forEach((job) => {
           workHistorySection.innerHTML += `
                     <div>
                         <h3>${job.title} - ${job.company}</h3>
-                        <p>${job.location} | ${job.startDate} - ${
+                        <p>${job.location} || ${job.startDate} - ${
             job.endDate
           }</p>
                         <ul>${job.contributions
@@ -91,7 +101,7 @@
         });
 
         // Build Education section
-        educationSection.innerHTML = `<h2>Education</h2>`;
+        educationSection.innerHTML = `<h2 class="sub">Education</h2>`;
         data.education.forEach((edu) => {
           educationSection.innerHTML += `
                     <div>
@@ -104,22 +114,22 @@
         });
 
         // Build Certifications section
-        certificationsSection.innerHTML = `<h2>Certifications</h2><ul>${data.certifications
+        certificationsSection.innerHTML = `<h2 class="sub">Certifications</h2><ul>${data.certifications
           .map((cert) => `<li>${cert.name} (${cert.date})</li>`)
           .join("")}</ul>`;
 
         // Build Accolades section
-        accoladesSection.innerHTML = `<h2>Accolades</h2><ul>${data.accolades
+        accoladesSection.innerHTML = `<h2 class="sub">Accolades</h2><ul>${data.accolades
           .map((accolade) => `<li>${accolade.name} (${accolade.date})</li>`)
           .join("")}</ul>`;
 
         // Build Homelab section
-        homelabSection.innerHTML = `<h2>Homelab</h2><ul>${data.homelab
+        homelabSection.innerHTML = `<h2 class="sub">Homelab</h2><ul>${data.homelab
           .map((item) => `<li>${item}</li>`)
           .join("")}</ul>`;
 
         // Build Personal section
-        personalSection.innerHTML = `<h2>Personal</h2>`;
+        personalSection.innerHTML = `<h2 class="sub">Personal</h2>`;
         data.personal.forEach((item) => {
           personalSection.innerHTML += `
                     <div>
