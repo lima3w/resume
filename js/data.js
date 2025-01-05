@@ -13,7 +13,7 @@ async function loadResume() {
 
 function renderResume(data) {
   // Get Sections
-  const header = document.getElementById("header");
+  const heading = document.getElementById("heading");
   const main = document.getElementById("main");
   const mainLeft = document.getElementById("mainLeft");
   const mainRight = document.getElementById("mainRight");
@@ -118,9 +118,9 @@ function renderResume(data) {
   });
 
   // Append sections to Header
-  header.appendChild(headerSection);
-  header.appendChild(infoSection);
-  header.appendChild(summarySection);
+  heading.appendChild(headerSection);
+  heading.appendChild(infoSection);
+  heading.appendChild(summarySection);
 
   // Append sections to Main
   mainRight.appendChild(skillsSection);
