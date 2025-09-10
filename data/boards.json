@@ -1,0 +1,20 @@
+[
+    {
+        "organization": "Scouting America",
+        "logo": "https://cdn2.webdamdb.com/220th_sm_gdUjoZWHY208ci9m.jpg?1753907539",
+        "website": "https://www.scouting.org/",
+        "description": "The mission of Scouting America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.",
+        "term_start": "2022-06-12",
+        "term_end": "2026-06-18",
+        "role": "Scoutmaster"
+    },
+    {
+        "organization": "Mid-Mo Technology Group",
+        "logo": "img/MMTG.png",
+        "website": "https://www.mwtc.io/",
+        "description": "Mid-Mo Technology Group is a Nonprofit organization created for the purpose of bringing technology professionals and enthusiasts together",
+        "term_start": "2025-09-01",
+        "term_end": "2026-09-01",
+        "role": "Secretary/Treasurer"
+    }
+]

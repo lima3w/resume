@@ -1,4 +1,58 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://resume.lima3.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Zack Lewis's Resume"
 theme = 'hugo-resume'
+
+PygmentsCodeFences = true
+PygmentsCodeFencesGuessSyntax = true
+PygmentsStyle = "monokai"
+enableGitInfo = false
+
+[params]
+address = "Mexico, MO"
+email = "info@lima3.me"
+favicon = "/favicon.ico"
+firstName = "Zack"
+lastName = "Lewis"
+phone = "573-682-0886"
+profileImage = "img/profile.jpg"
+showQr = true
+showContact = false
+showBoards  = true
+showCertifications = true
+showSocializations = true
+sections = [
+    "skills",
+    "publications",
+    #"creations",
+    #"contributions",
+    "experience",
+    "education",
+    #"blog"
+    ]
+
+[[params.handles]]
+    name = "LinkedIn"
+    link = "https://www.linkedin.com/in/lima3/"
+
+[[params.handles]]
+    name = "GitHub"
+    link = "https://github.com/lima3w"
+
+[[params.handles]]
+    name = "Github (Classwork)"
+    link = "https://github.com/zack-lewis"
+
+[[params.handles]]    
+    name = "Blog"
+    link = "https://lima3.dev"
+    icon = "qq"
+
+[permalinks]
+  publications = "/presentations/:title/"
+
+[outputs]
+home = ["HTML", "JSON"]
+
+[taxonomies]
+tag = "tags"

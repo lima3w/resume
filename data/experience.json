@@ -1,0 +1,32 @@
+[
+    {
+        "role": "Hypervisor Administrator",
+        "company": "University of Missouri, Columbia, MO",
+        "summary": "- Manage and Monitor multiple virtual server environments across multiple sites to ensure secure, consistent, reliable, and up-to-date architecture\n- Support multiple storage array platforms across multiple sites to meet the needs of departments across Mizzou academia",
+        "range": "September 2020 - Present"
+    },
+    {
+        "role": "Systems Engineer",
+        "company": "Huber and Associates, Jefferson City, MO",
+        "summary": "- Managed and maintained Veeam cloud environment\n- Earned VMCE certification to ensure my understanding of the Veeam products\n- Developed best practices for on-premise Veeam environments and implemented these policies at client locations\n- Planned and implemented various server deployments at client locations",
+        "range": "October 2018 - August 2020"
+    },
+    {
+        "role": "Linux Systems Administrator",
+        "company": "State of Missouri, Jefferson City, MO",
+        "summary": "- Automated server build process to reduce time from 4 hours to 15 minutes per server\n- Scripted security checks for servers based on federal guidelines\n- Monitored and Managed virtual and physical servers in a RHEL environment\n- Kept production and dev/test environments updated on schedule",
+        "range": "August 2014 - September 2018"
+    },
+    {
+        "role": "Business Service Technician",
+        "company": "Mediacom Cable, Jefferson City, MO",
+        "summary": "-  Installation and troubleshooting of cable services in business and residential environments",
+        "range": "October 2013 - July 2014"
+    },
+    {
+        "role": "Technical Support Representative",
+        "company": "ECi-OMD, Jefferson City, MO",
+        "summary": "- Technical support for OMD software\n- Worked with developers to improve connectivity with third party applications",
+        "range": "January 2012 - September 2013"
+    }
+]
