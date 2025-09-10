@@ -6,4 +6,4 @@ if in $projects . }} {{ with $site.GetPage "section" (printf "projects/%s" .) }}
 end }} {{ else if in $sections . }} {{ with $site.GetPage "section" . }} {{
 .Scratch.Set "sectionId" $sectionName }} {{ partial "sectionSummary" . }} {{ end
 }} {{ else }} {{ partial (printf "portfolio/%s" . ) $site }} {{ end }} {{ end }}
-{{ hugo.Version }} {{ end }}
+{{ hugo.Environment }} {{ end }}
