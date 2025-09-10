@@ -32,10 +32,18 @@ sections = [
     #"blog"
     ]
 
+# Handles use Font Awesome Brands for icons. 
+# https://fontawesome.com/icons/packs/brands
+
 [[params.handles]]
     name = "LinkedIn"
     link = "https://www.linkedin.com/in/lima3/"
 
+[[params.handles]]
+    name = "Email"
+    link = "mailto:resume@lima3.me"
+    icon = "google"
+    
 [[params.handles]]
     name = "GitHub"
     link = "https://github.com/lima3w"
