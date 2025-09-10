@@ -1,4 +1,5 @@
-baseURL = 'https://resume.lima3.dev/'
+#baseURL = 'https://resume.lima3.dev/'
+relativeURLs = true
 languageCode = 'en-us'
 title = "Zack Lewis's Resume"
 theme = 'hugo-resume'
