@@ -1,0 +1,28 @@
+[
+    {
+        "grouping": "Architecture",
+        "skills": [
+            "IP Networking",
+            "DNS",
+            "Load Balancing",
+            "Microservices",
+            "RESTful APIs"
+        ]
+    },
+    {
+        "grouping": "Languages, Operating Systems & Tools",
+        "skills": [
+            "Java",
+            "Python",
+            "git",
+            { "name": "Red Hat Enterprise Linux", "icon": "redhat" },
+            { "name": "bash", "icon": "linux" },
+            "php",
+            "javascript"
+        ]
+    },
+    {
+        "grouping": "Containers & Cloud",
+        "skills": ["Docker"]
+    }
+]

@@ -1,0 +1,27 @@
+.resume-section {
+    font-family: Tahoma, Georgia;
+}
+
+.list-social-icons a:hover {
+    color: #00356a;
+}
+.list-icons .list-inline-item i:hover {
+    color: #00356a;
+}
+.bg-primary {
+    background-color: #00356a !important;
+}
+
+.text-primary {
+    color: #00356a !important;
+}
+
+a {
+    color: #00356a;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #00356a;
+}
